@@ -1,6 +1,6 @@
 import json
 import boto3
-from openai import OpenAI
+from openai import OpenAI  # added as a layer to the lambda function
 import os
 
 s3 = boto3.client('s3')

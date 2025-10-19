@@ -2,7 +2,6 @@
 import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/client-s3'
 import axios from 'axios'
 
-console.log('VITE_API_GATEWAY_URL:', import.meta.env.VITE_API_GATEWAY_URL);
 const BUCKET_NAME = "ai-notes-generator-summaries";
 
 const s3 = new S3Client({
@@ -24,7 +23,7 @@ export async function getSummaryContent(key: string): Promise<string> {
   const command = new GetObjectCommand({ Bucket: BUCKET_NAME, Key: key });
   const response = await s3.send(command);
 
-  // Response.Body is a ReadableStream. We need to convert it to string
+  // Response.Body is a ReadableStream. Conver to a string here
   const stream = response.Body as ReadableStream<Uint8Array>;
 
   const reader = stream.getReader();

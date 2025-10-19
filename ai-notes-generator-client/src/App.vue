@@ -2,8 +2,6 @@
   <div id="app">
     <nav>
       <router-link to="/upload">Upload</router-link>
-      <router-link to="/transcripts">Transcripts</router-link>
-      <router-link to="/summaries">Summaries</router-link>
     </nav>
     <router-view />
   </div>
