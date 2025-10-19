@@ -20,26 +20,6 @@ Cloud-Native: No servers to manage, fully event-driven
 
 Versatile: Ideal for lectures, podcasts, or meetings
 
-Frontend (Vue.js)
-        │
-        ▼
-API Gateway + Lambda (API for uploads & presigned URLs)
-        │
-        ▼
-uploads/ (S3 Bucket)
-        │
-        ▼
-Lambda #1: Transcription Trigger
-        │
-        ▼
-transcripts/ (S3 Bucket)
-        │
-        ▼
-Lambda #2: Summarization Trigger
-        │
-        ▼
-summaries/ (S3 Bucket)
-
 🧠 Tech Stack
 
 Frontend: Vue.js + Axios
