@@ -26,7 +26,7 @@ def lambda_handler(event, context):
         secret_name = 'gptKey'
         OpenAI.api_key = get_openai_key(secret_name)
 
-        prompt = f"Summarize this lecture transcript into study notes for a student to understand clearly and easily.:\n\n{transcript_text}"
+        prompt = f"Summarize this lecture transcript into study notes for a student to understand clearly and easily. If the language is inappropriate, use similar word to replace the inappropriate words.:\n\n{transcript_text}"
         
         client = OpenAI(api_key=get_openai_key(secret_name))
 
